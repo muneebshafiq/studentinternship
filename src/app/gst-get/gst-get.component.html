@@ -1,0 +1,24 @@
+<div class="jumbotron">
+<table class="table table-hover">
+  <thead>
+  <tr>
+      <td>Person Name</td>
+      <td>Email</td>
+      <td>Roll Number</td>
+      <td>Password</td>
+      <td colspan="2">Actions</td>
+  </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let business of businesses">
+        <td>{{ business.person_name }}</td>
+        <td>{{ business.business_name }}</td>
+        <td>{{ business.business_gst_number }}</td>
+        <td>{{ business.user_password }}</td>
+        <td><a [routerLink]="['edit', business._id]" class="btn btn-primary">Edit</a></td>
+        <td><a (click) = "deleteBusiness(business._id)" class="btn btn-danger">Delete</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-body">
+        <div><h1>Login</h1></div>
+        <br>
+      <form [formGroup]="angForm" novalidate>
+        <div class="form-group">
+          <label class="col-md-4">Email </label>
+          <input type="text" class="form-control" formControlName="business_name" #business_name />
+        </div>
+        <div *ngIf="angForm.controls['business_name'].invalid && (angForm.controls['business_name'].dirty || angForm.controls['business_name'].touched)" class="alert alert-danger">
+          <div *ngIf="angForm.controls['business_name'].errors.required">
+            Person Email is required.
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4">Password </label>
+          <input type="password" class="form-control" formControlName="user_password" #user_password />
+        </div>
+        <div *ngIf="angForm.controls['user_password'].invalid && (angForm.controls['user_password'].dirty || angForm.controls['user_password'].touched)" class="alert alert-danger">
+          <div *ngIf="angForm.controls['user_password'].errors.required">
+            Password is required.
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <button (click)="check_user(business_name.value, user_password.value)"
+              [disabled]="angForm.pristine || angForm.invalid" 
+              class="btn btn-primary">
+              Login
+           </button>
+      </div>
+      <div class="form-group">
+        <a (click)="gotoRegister()" style="color:chocolate">Register?</a>
+    </div>
+      </form>
+    </div>
+  </div>

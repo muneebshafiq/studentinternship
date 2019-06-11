@@ -1,0 +1,34 @@
+button
+{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #fdad63;
+    width: 30%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+button:hover, button:active, button:focus {
+    background: #ff9c3f;
+  }
+  
+.jumbotron
+{
+    width: 70%;
+    padding-left: 7%;
+    padding-right: 7%;
+    margin: auto;
+    background:rgba(0,0,0,0.6);
+    margin-bottom: 0px;
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+

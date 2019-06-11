@@ -1,0 +1,118 @@
+<div class="container text-center">
+
+  <div class="jumbotron text-center">
+    <h1 style="color:white">Enter Details</h1>
+    <hr>
+
+    <!-- First Name  Last Name -->
+    <div class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg">First Name</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" required="required" #first_name>
+
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg">Last Name</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" required="required" #last_name>
+    </div>
+    <br>
+
+    <!-- Age -->
+    <div class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg">Age</span>
+      </div>
+      <input type="number" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" #age>
+    </div>
+    <br>
+
+    <!-- Gender -->
+    <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Gender</span>
+        </div>
+        <select class="form-control" #gender>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+      <br>
+
+      <!-- Date of birth -->
+      <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Date of Birth</span>
+          </div>
+          <input type="date" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" #DOB>
+        </div>
+        <br>
+
+        <!-- CNIC Number -->
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-lg">CNIC</span>
+            </div>
+            <input type="number"  class="form-control cnic" aria-label="Large" aria-describedby="inputGroup-sizing-sm" #CNIC>
+          </div>
+          <br>
+
+        <!-- Picture -->
+        <div class="input-group input-group-lg">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-lg">Picture</span>
+            </div>
+            <div class="custom-file form-control"  >
+                <input type="file" class="custom-file-input" #picture>
+                <label class="custom-file-label" for="customFile">Choose file</label>
+              </div>
+          </div>
+          <br>
+          <br>
+          <br>
+
+          <h4 style="color:white" >Additional Infromation</h4>
+
+      <!-- Skills -->
+      <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Skills</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" #skills>
+        </div>
+        <br>
+
+      <!-- Activities -->
+      <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Activities</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" #activities>
+        </div>
+        <br>
+
+        
+      <!-- Achievements -->
+      <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Achievements</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" #achievements>
+        </div>
+        <br>
+
+        
+      <!-- Exprience -->
+      <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-lg">Exprience</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" #exprience>
+        </div>
+        <br>
+    <br>
+    <button (click)="addDetails(first_name.value, last_name.value, age.value, gender.value, DOB.value, CNIC.value, picture.value, skills.value, activities.value, achievements.value, exprience.value)">Confirm</button>
+
+  </div>
+
+</div>
